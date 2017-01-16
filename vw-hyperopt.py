@@ -217,7 +217,7 @@ class HyperOptimizer(object):
         self.param_suffix += ' %s' % (kwargs['argument'])
 
     def compose_vw_train_command(self):
-        data_part = ('vw --oaa 550 -b31 --passes 10 --loss_function hinge  -d %s -f %s --holdout_off  -c'
+        data_part = ('vw   -d %s -f %s --holdout_off  -c'
                      % (self.train_set, self.train_model))
         self.train_command = ' '.join([data_part, self.param_suffix])
 
